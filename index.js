@@ -19,7 +19,7 @@ function displayTasks(tasks) {
 async function getTodos() {
     const response = await fetch('https://jsonplaceholder.typicode.com/todos')
         const json = await response.json()
-        displayTasks(json)
+        displayTasks(json.slice(0,9))
 }
 
 getTodos()
