@@ -1,0 +1,21 @@
+
+.task-list{
+    display: grid;
+    grid-template-columns: 250px 600px 150px;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    align-items: start;
+    font-size: 20px;
+}
+.task-list span {
+    padding: 10px;
+
+}
+
+.all-tasks{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
