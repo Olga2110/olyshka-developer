@@ -3,14 +3,18 @@
     display: grid;
     grid-template-columns: 250px 600px 150px;
     list-style: none;
-    padding: 10px 0;
-    margin: 0;
+    padding: 5px 0;
+    margin: 5px 0;
     align-items: start;
     font-size: 20px;
+    border: 2px solid black;
+    max-width: 800px;
+    gap: 200px;
+
+
 }
 .task-list span {
-    padding: 10px;
-
+    padding: 5px;
 }
 
 .all-tasks{
@@ -18,4 +22,5 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
 }
