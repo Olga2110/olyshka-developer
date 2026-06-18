@@ -1,6 +1,8 @@
 
 
 const all_tasks = document.querySelector('.all-tasks')
+const loading  = document.getElementById('loading')
+
 
 function displayTasks(tasks) {
     tasks.forEach((task) => {
@@ -17,9 +19,17 @@ function displayTasks(tasks) {
 }
 
 async function getTodos() {
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos')
-        const json = await response.json()
-        displayTasks(json.slice(0,9))
+    loading.style.display = 'block';
+        try{
+            const response = await fetch('https://jsonplaceholder.typicode.com/todos')
+            await new Promise(resolve => setTimeout(resolve, 2000))
+            const json = await response.json()
+            displayTasks(json.slice(0,9))
+        }catch(err){
+            console.log(err)
+        }finally{
+            loading.style.display = 'none';
+        }
 }
 
 getTodos()
