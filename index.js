@@ -6,13 +6,21 @@ const loading  = document.getElementById('loading')
 const button = document.querySelector('.button_add_task')
 const input = document.querySelector('.input-for-add-task')
 
+
 const buildTask = (task) => {
     const container = document.createElement('div');
     container.classList.add('task-list');
 
     container.innerHTML =
         `<span>${task.title}</span> 
-        <span>${task.body?.slice(0,20)}</span>`
+         <span>${task.body?.slice(0,20)}</span>
+         <button class="delete-task">Удалить</button>`
+    
+    const buttonDelete = container.querySelector('.delete-task');
+    buttonDelete.addEventListener('click', (event) => {
+        const task = event.target.closest('.task-list');
+        task.remove();
+    })
 
     return container;
 }
@@ -59,5 +67,7 @@ async function postTasks(data){
     }
 }
 
+
 getTodos()
 addTasks()
+deleteTask()

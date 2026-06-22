@@ -1,27 +1,24 @@
 
 .task-list{
     display: grid;
-    grid-template-columns: 250px 600px 150px;
-    list-style: none;
-    padding: 5px 0;
+    grid-template-columns: 250px 1fr 120px;
+    gap: 20px;
+    padding: 10px;
     margin: 5px 0;
     align-items: start;
     font-size: 20px;
     border: 2px solid black;
-    max-width: 800px;
-    gap: 200px;
-
-
+    width: 800px;
 }
 .task-list span {
     padding: 5px;
 }
 
 .all-tasks{
-    margin-top: 50px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #loading{
@@ -44,4 +41,8 @@
 .button_add_task {
     max-width: 100px;
     cursor: pointer;
+}
+.delete-task {
+    cursor: pointer;
+
 }
