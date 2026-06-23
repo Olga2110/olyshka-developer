@@ -1,29 +1,48 @@
 
 .task-list{
     display: grid;
-    grid-template-columns: 250px 600px 150px;
-    list-style: none;
-    padding: 5px 0;
+    grid-template-columns: 250px 1fr 120px;
+    gap: 20px;
+    padding: 10px;
     margin: 5px 0;
     align-items: start;
     font-size: 20px;
     border: 2px solid black;
-    max-width: 800px;
-    gap: 200px;
-
-
+    width: 800px;
 }
 .task-list span {
     padding: 5px;
 }
 
 .all-tasks{
-    margin-top: 100px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 #loading{
     display: none;
+}
+.add-task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.input-for-add-task{
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.button_add_task {
+    max-width: 100px;
+    cursor: pointer;
+}
+.delete-task {
+    cursor: pointer;
+
 }
