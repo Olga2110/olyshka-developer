@@ -6,14 +6,16 @@ const loading  = document.getElementById('loading')
 const button = document.querySelector('.button_add_task')
 const input = document.querySelector('.input-for-add-task')
 
+const error = document.querySelector('.error')
+
 
 const deleteTask = (container) => {
     const buttonDelete = container.querySelector('.delete-task');
         buttonDelete.addEventListener('click', (event) => {
             const task = event.target.closest('.task-list');
             task.remove();
-        })  
-    
+        })
+
 }
 const buildTask = (task) => {
     const container = document.createElement('div');
@@ -42,6 +44,8 @@ async function getTodos() {
             displayTasks(json.slice(0,9))
         }catch(err){
             console.log(err)
+            error.style.display = 'block';
+
         }finally{
             loading.style.display = 'none';
         }
